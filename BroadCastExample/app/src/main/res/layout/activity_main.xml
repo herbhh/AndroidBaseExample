@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btn_send_simple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Simple Broadcast"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_send_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Order Broadcast"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/btn_register_dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Dynamic Broadcast"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_send_dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Dynamic Broadcast"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_unregister_dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unRegister Dynamic Broadcast"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>
