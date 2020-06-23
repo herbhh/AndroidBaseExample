@@ -1,45 +1,37 @@
 package com.bud.activityexample;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.ComponentName;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
-    private static final String TAG = MainActivity.class.getSimpleName();
+public class ThirdActivity extends Activity {
+
+    public final static String TAG = ThirdActivity.class.getSimpleName();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        findViewById(R.id.btn_open_second).setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_third);
+        findViewById(R.id.btn_open_main).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                ComponentName componentName = new ComponentName("com.bud.activityexample", "com.bud.activityexample.SecondActivity");
-                intent.setComponent(componentName);
+                Intent intent = getPackageManager().getLaunchIntentForPackage("com.bud.activityexample");
                 startActivity(intent);
             }
         });
-        findViewById(R.id.btn_open_third).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_open_second).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setClassName("com.bud.activityexample", "com.bud.activityexample.ThirdActivity");
+                Intent intent = new Intent(ThirdActivity.this, SecondActivity.class);
                 startActivity(intent);
             }
         });
         Log.d(TAG, "========onCreate()========");
-    }
-
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
     }
 
     @Override
