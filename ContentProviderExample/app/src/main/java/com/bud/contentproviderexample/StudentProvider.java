@@ -100,7 +100,7 @@ public class StudentProvider extends ContentProvider {
 
     @Override
     public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
-        int uriType = sUriMatcher(uri);
+        int uriType = sUriMatcher.match(uri);
         int rowDelete;
 
         switch (uriType) {

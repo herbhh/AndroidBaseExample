@@ -16,6 +16,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:authorities="com.bud.contentproviderexample.provider"
+            android:name=".StudentProvider"
+            android:exported="true"
+            android:process=":provider"
+            android:readPermission="com.bud.example.provider.READ_PERMISSION"
+            android:writePermission="com.bud.example.provider.WRITE_PERMISSION"/>
     </application>
 
+    <permission
+        android:name="com.bud.example.provider.READ_PERMISSION"
+        android:label="Student provider read permission"
+        android:protectionLevel="normal"/>
+
+    <permission
+        android:name="com.bud.example.provider.WRITE_PERMISSION"
+        android:label="Student provider write permission"
+        android:protectionLevel="normal"/>
+    
 </manifest>
