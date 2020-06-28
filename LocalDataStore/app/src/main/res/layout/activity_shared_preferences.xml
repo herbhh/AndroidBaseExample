@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_save_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="添加String字符串"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_read_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="添加int"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_save_file"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="@+id/btn_save_file"
+        app:layout_constraintTop_toBottomOf="@+id/btn_save_file" />
+
+    <Button
+        android:id="@+id/btn_open_sqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="添加Boolean"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_read_file"
+        app:layout_constraintStart_toStartOf="@+id/btn_read_file"
+        app:layout_constraintTop_toBottomOf="@+id/btn_read_file" />
+
+    <Button
+        android:id="@+id/btn_add_long"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="添加Long"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_open_sqlite"
+        app:layout_constraintStart_toStartOf="@+id/btn_open_sqlite"
+        app:layout_constraintTop_toBottomOf="@+id/btn_open_sqlite" />
+
+    <Button
+        android:id="@+id/btn_add_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="添加float"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_add_long"
+        app:layout_constraintStart_toStartOf="@+id/btn_add_long"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_long" />
+
+    <Button
+        android:id="@+id/btn_remove_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="删除String字符串"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_add_set"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/btn_add_set"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_set" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="清空sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_remove_string"
+        app:layout_constraintStart_toStartOf="@+id/btn_remove_string"
+        app:layout_constraintTop_toBottomOf="@+id/btn_remove_string" />
+
+    <Button
+        android:id="@+id/btn_add_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="添加set string集合"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_add_float"
+        app:layout_constraintStart_toStartOf="@+id/btn_add_float"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_float" />
+
+    <Button
+        android:id="@+id/btn_get_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:text="获取String字符串"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/btn_read_file"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btn_get_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="获取set集合"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_get_long"
+        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintStart_toStartOf="@+id/btn_get_long"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_long" />
+
+    <Button
+        android:id="@+id/btn_get_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="获取float"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_get_int"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/btn_get_int"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_int" />
+
+    <Button
+        android:id="@+id/btn_get_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="获取int"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_get_boolean"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="@+id/btn_get_boolean"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_boolean" />
+
+    <Button
+        android:id="@+id/btn_get_long"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="获取Long"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_get_float"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/btn_get_float"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_float" />
+
+    <Button
+        android:id="@+id/btn_get_boolean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="获取Boolean"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btn_get_string"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/btn_get_string"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_string" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:text="Value："
+        app:layout_constraintStart_toEndOf="@+id/btn_save_file"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

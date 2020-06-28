@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.broadcastexample">
+    package="com.bud.broadcastexample">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.bud.broadcastexample.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,27 +17,27 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SecondActivity" />
+        <activity android:name="com.bud.broadcastexample.SecondActivity" />
 
-        <receiver android:name=".SimpleReceiver">
+        <receiver android:name="com.bud.broadcastexample.SimpleReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.SIMPLERECEIVER" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".OrderReceiver1">
+        <receiver android:name="com.bud.broadcastexample.OrderReceiver1">
             <intent-filter android:priority="1">
                 <action android:name="android.intent.action.ORDERRECEIVER" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".OrderReceiver2">
+        <receiver android:name="com.bud.broadcastexample.OrderReceiver2">
             <intent-filter android:priority="100">
                 <action android:name="android.intent.action.ORDERRECEIVER" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".OrderReceiver3">
+        <receiver android:name="com.bud.broadcastexample.OrderReceiver3">
             <intent-filter android:priority="200">
                 <action android:name="android.intent.action.ORDERRECEIVER" />
             </intent-filter>
